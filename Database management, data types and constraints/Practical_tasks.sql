@@ -34,7 +34,7 @@ CREATE UNIQUE INDEX index_for_name_email_phone
 ON customers (name, email, phone);
 
 -- INSERT test data into customers table
-INSERT INTO customers (name, email, phone, age, GDPR, is_profile_active,)
+INSERT INTO customers (name, email, phone, age, GDPR, is_profile_active)
 VALUES
   ('Maisie Flores','nulla.magna@protonmail.edu','1-538-567-8771', 20, true, true),
   ('Martin Bachev','martin.magna@test.edu','1-5238-567-8771', 36, true, true);
