@@ -3,7 +3,7 @@
 
 --create customer with all fields, only with the mandatory fields
 INSERT INTO customers (name, email, phone, age, GDPR, is_profile_active, profile_deactivated, deactivation_reason, notes)
-VALUES ('Petyr Petrov','mbel@protonmail.edu','4-534-5367-8771', 70, true, false, '2022-07-01 12:10:27.128922', 'no reason',
+VALUES ('Petyr Petrov','mbel@protonmail.edu','4-534-5367-8771', 70, true, true, null, null,
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum');
 
 -- Retrieving all customers
@@ -27,13 +27,13 @@ SELECT * FROM customers WHERE id = 3;
 -- Change contact phone
 -- Deactivate account
 UPDATE customers
-    set phone = '0888-444-858', is_profile_active = 'false',  profile_deactivated = '2022-06-25 11:05:27.1111224'
+    set phone = '0888-444-858', is_profile_active = 'false',  profile_deactivated = NOW(), deactivation_reason= 'no reason'
     WHERE id = 3;
 SELECT * FROM customers WHERE id = 3;
 
 -- Activate account
 UPDATE customers
-    set is_profile_active = 'true'
+    set is_profile_active = 'true', profile_deactivated = NULL, deactivation_reason = NULL
     WHERE id = 3;
 SELECT * FROM customers WHERE id = 3;
 
