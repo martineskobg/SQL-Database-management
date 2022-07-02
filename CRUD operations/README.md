@@ -22,7 +22,7 @@ Description: Create SQL scripts for CRUD operations of customers table:
 * retrieving all customers
   * query that retrieves only customer’s name and phone
   * query that retrieves only internal information about the user - GDPR status, profile status, date created, date deactivated, reason for deactivation and the notes taken of the user 
-  * 
+  
 * retrieving all customer info by customer id
 * update customer by id
   * change contact phone
@@ -33,6 +33,4 @@ Description: Create SQL scripts for CRUD operations of customers table:
 
 ### Instruction
 Before run any of the queries in Practical_tasks_CRUD_Operation.sql, please use this file to create database and table
-[(Create database and table)]([https://github.com/martineskobg/SQL-Database-management/tree/master/Database%20management%2C%20data%20types%20and%20constraints])
-
-
+[(Create database and table)](https://github.com/martineskobg/SQL-Database-management/blob/master/Database%20management%2C%20data%20types%20and%20constraints/Practical_tasks.sql).
