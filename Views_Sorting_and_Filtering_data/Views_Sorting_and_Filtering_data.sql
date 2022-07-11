@@ -61,3 +61,4 @@ SELECT * FROM customers_addresses
     WHERE postal_code::text 
     LIKE '3__7'
     ORDER BY country, city DESC;
+	
