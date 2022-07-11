@@ -43,9 +43,9 @@ SELECT * FROM customers_addresses ORDER BY country;
 SELECT * FROM customers_addresses WHERE city LIKE 'S%';
 
 --get 3 different random cities located in Bulgaria
-SELECT city FROM customers_addresses WHERE country = 'Bulgaria'
-GROUP BY city
-ORDER BY RANDOM()  LIMIT 3;
+SELECT * FROM (SELECT DISTINCT city FROM customers_addresses WHERE country = 'Bulgaria') c
+    ORDER BY random()
+    LIMIT 3;
 
 --get a list of all addresses in Bulgaria outside of Sofia, Plovdiv, Varna
 SELECT address, city FROM customers_addresses WHERE city NOT IN('Sofia', 'Plovdiv', 'Varna');
