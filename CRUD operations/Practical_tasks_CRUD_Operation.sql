@@ -1,7 +1,7 @@
 -- Before run the below queries please use this file to create database and table
 -- https://github.com/martineskobg/SQL-Database-management/tree/master/Database%20management%2C%20data%20types%20and%20constraints
 
---create customer with all fields, only with the mandatory fields
+--create customer with all fields, mandatory fields only
 INSERT INTO customers (name, email, phone, age, GDPR, is_profile_active, profile_deactivated, deactivation_reason, notes)
 VALUES ('Petyr Petrov','mbel@protonmail.edu','4-534-5367-8771', 70, true, true, null, null,
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum');
